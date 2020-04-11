@@ -18,22 +18,14 @@ namespace PartyManagerExtended
 {
     public class PartyManagerExtendedSubModule : MBSubModuleBase
     {
-
-        protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
+    protected override void OnSubModuleLoad()
         {
-            try
-            {
-                new InformationMessage("Mod initialized");
-                if (!(game.GameType is Campaign)) return;
-                if (!(gameStarterObject is CampaignGameStarter gameInitializer)) return;
-            }
-            catch (Exception e)
-            {
-                new InformationMessage("Mod failed to load");
-            }
+            Module.CurrentModule.AddInitialStateOption(new InitialStateOption("Hello",
+    new TextObject("Hello", null),
+    9990,
+    () => { InformationManager.DisplayMessage(new InformationMessage("Hello World!")); },
+    false));
         }
-
-   
 
 	}
 }
