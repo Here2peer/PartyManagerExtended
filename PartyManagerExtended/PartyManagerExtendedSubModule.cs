@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
-using CustomCampaignOptions.Behaviours;
-using CustomCampaignOptions.GameModels;
 using StoryMode.GameModels;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.SandBox.GameComponents;
@@ -27,7 +25,6 @@ namespace PartyManagerExtended
                 if (!(game.GameType is Campaign)) return;
                 if (!(gameStarterObject is CampaignGameStarter gameInitializer)) return;
                 new InformationMessage("Mod initialized");
-                party
             }
             catch (Exception e)
             {
