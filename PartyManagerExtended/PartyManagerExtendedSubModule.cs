@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+using TaleWorlds.Localization;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
@@ -22,15 +23,16 @@ namespace PartyManagerExtended
         {
             try
             {
+                new InformationMessage("Mod initialized");
                 if (!(game.GameType is Campaign)) return;
                 if (!(gameStarterObject is CampaignGameStarter gameInitializer)) return;
-                new InformationMessage("Mod initialized");
             }
             catch (Exception e)
             {
                 new InformationMessage("Mod failed to load");
             }
         }
+
    
 
 	}
